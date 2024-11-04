@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.4'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.skillsoft.springboot'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    // Include Spring Boot Web Starter but exclude Tomcat
+    implementation('org.springframework.boot:spring-boot-starter-web') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    }
+
+    // Add Jetty as the embedded server
+    implementation 'org.springframework.boot:spring-boot-starter-jetty'
+}
