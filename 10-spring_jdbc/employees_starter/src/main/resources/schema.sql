@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS EMPLOYEES (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    title VARCHAR(255),
+    salary BIGINT,
+    department VARCHAR(255)
+);
