@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${heading}">Book Details</h1>
+    <div class="book-details">
+        <!-- TODO display book title -->
+        <p><strong>Title:</strong> <span th:text="${book.title}"></span></p>
+        <!-- TODO display book author -->
+        <p><strong>Author:</strong> <span th:text="${book.author}"></span></p>
+        <!-- TODO display book release date -->
+        <p><strong>Release Date:</strong> <span th:text="${book.releaseDate}"></span></p>
+        <!-- TODO display book blurb-->
+        <p><strong>Blurb:</strong> <span th:text="${book.blurb}"></span></p>
+    </div>
+    <a href="/books" class="back-link">Back to Book List</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* Import Roboto Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2em; /* Reduced font size */
+    margin-bottom: 20px;
+}
+
+/* Table Styling for book-list */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em; /* Smaller font size */
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Headers */
+.styled-table thead tr {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    font-weight: 500; /* Use Roboto font weight */
+}
+
+/* Table Body Styling */
+.styled-table th,
+.styled-table td {
+    padding: 10px 12px; /* Reduced padding for a more compact look */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover Effect for Rows */
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Zebra Stripe for Rows */
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Link Styling */
+.book-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95em; /* Slightly smaller link font size */
+}
+
+.book-link:hover {
+    text-decoration: underline;
+}
+
+/* Book Details Styling */
+.book-details {
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-details p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.book-details strong {
+    color: #4CAF50;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .styled-table thead {
+        display: none;
+    }
+
+    .styled-table,
+    .styled-table tbody,
+    .styled-table tr,
+    .styled-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .styled-table tr {
+        margin-bottom: 10px;
+    }
+
+    .styled-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .styled-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 500;
+        text-align: left;
+    }
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Add Book Button Styling */
+.add-book-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.add-book-button:hover {
+    background-color: #45a049;
+}
+
+/* Delete Button Styling */
+.delete-button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #ff3333;
+}
+
+.delete-form {
+    margin-top: 20px;
+}
