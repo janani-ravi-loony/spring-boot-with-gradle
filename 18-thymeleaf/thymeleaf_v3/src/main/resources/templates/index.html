@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of Cars</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+
+<h1>Available Cars</h1>
+
+<!-- Loop through the list of cars -->
+<ul>
+    <li th:each="car : ${cars}">
+        <strong th:text="${car.name}">Car Name</strong> (Year: <span th:text="${car.year}">2022</span>) -
+        <span th:text="${car.fuelType}">Fuel Type</span>
+
+        <!-- Conditional: show 'Edit' button only if the user is logged in -->
+        <button th:if="${isLoggedIn}" th:text="'Edit ' + ${car.name}">Edit</button>
+    </li>
+</ul>
+
+<!-- Show a message if the user is not logged in -->
+<p th:unless="${isLoggedIn}">You need to log in to edit car details.</p>
+
+</body>
+</html>

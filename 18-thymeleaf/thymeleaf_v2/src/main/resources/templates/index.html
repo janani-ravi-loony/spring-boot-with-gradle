@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello Thymeleaf</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+
+<!-- Using ${} to access model variables -->
+<h1 th:text="'Welcome, ' + ${name} + '!'">Welcome!</h1>
+<p th:text="'You are ' + ${age} + ' years old.'">Age Placeholder</p>
+<p th:text="'Current time: ' + ${currentTimestamp}">Timestamp Placeholder</p>
+
+<!-- Using th:utext for raw HTML content -->
+<p th:utext="${rawHtml}">Raw HTML will appear here</p>
+
+
+<h1 th:text="#{subtitle}">Subtitle Placeholder</h1>
+
+<!-- Using #{greeting} with arguments to replace {0} in the message -->
+<h3 th:text="#{greeting(${name})}">Welcome!</h3>
+
+<!-- Using #{currentTimeMessage} with arguments to replace {1} in the message -->
+<p th:text="#{currentTimeMessage(${currentTimestamp})}">Timestamp Placeholder</p>
+
+</body>
+</html>
